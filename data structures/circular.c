@@ -62,30 +62,9 @@ void displaylist(struct node *head ){
 
 
 
-//Floyd Cycle finding alogrithm ( don't remove this comment )
 
 
-void looplist(struct node *head){
- struct node *slow , *fast;
- slow = fast = head;
-do{
- slow = slow->next;
- fast = fast->next;
- fast = fast?fast->next:fast;
-}
-while(slow && fast && slow != fast);
 
-if(slow == fast ) {
-  printf("loop exist");
-
-}
-else {
-  printf("no loop ");
-
-}
-
-
-}
 
 void circularlist(struct node *head){
 struct node *p ;
